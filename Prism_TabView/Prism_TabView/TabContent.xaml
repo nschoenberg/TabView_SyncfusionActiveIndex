@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Prism_TabView"
+             x:Class="Prism_TabView.TabContent">
+  <ContentView.Content>
+        <Grid BackgroundColor="Pink" >
+            <ListView x:Name="stack"
+                                  ItemsSource="{Binding ContactList}"
+                                  RowHeight="75">
+                <ListView.BindingContext>
+                    <local:ContactsViewModel />
+                </ListView.BindingContext>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Vertical" Margin="30,0,0,0">
+                                <Label Text="{Binding Name}"
+                                       FontSize="24" />
+                                <Label Text="{Binding Number}" 
+                                       FontSize="20" 
+                                       TextColor="LightSlateGray" />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Grid>
+    </ContentView.Content>
+</ContentView>

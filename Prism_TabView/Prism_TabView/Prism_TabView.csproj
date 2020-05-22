@@ -1,0 +1,83 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>pdbonly</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Icons\treeview_exe.png" />
+    <None Remove="Icons\treeview_folder.png" />
+    <None Remove="Icons\treeview_img0.png" />
+    <None Remove="Icons\treeview_img1.png" />
+    <None Remove="Icons\treeview_mp3.png" />
+    <None Remove="Icons\treeview_pdf.png" />
+    <None Remove="Icons\treeview_png.png" />
+    <None Remove="Icons\treeview_ppt.png" />
+    <None Remove="Icons\treeview_video.png" />
+    <None Remove="Icons\treeview_word.png" />
+    <None Remove="Icons\treeview_zip.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Icons\treeview_exe.png" />
+    <EmbeddedResource Include="Icons\treeview_folder.png" />
+    <EmbeddedResource Include="Icons\treeview_img0.png" />
+    <EmbeddedResource Include="Icons\treeview_img1.png" />
+    <EmbeddedResource Include="Icons\treeview_mp3.png" />
+    <EmbeddedResource Include="Icons\treeview_pdf.png" />
+    <EmbeddedResource Include="Icons\treeview_png.png" />
+    <EmbeddedResource Include="Icons\treeview_ppt.png" />
+    <EmbeddedResource Include="Icons\treeview_video.png" />
+    <EmbeddedResource Include="Icons\treeview_word.png" />
+    <EmbeddedResource Include="Icons\treeview_zip.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Prism.Unity.Forms" Version="7.2.0.1367" />
+    <PackageReference Include="Syncfusion.Xamarin.SfDataGrid" Version="17.4.0.55" />
+    <PackageReference Include="Syncfusion.Xamarin.SfTreeView" Version="17.4.0.55" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.0.0" />
+    <PackageReference Include="Xamarin.Forms" Version="4.4.0.991640" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Syncfusion.SfTabView.XForms">
+      <HintPath>..\..\Assemblies\Syncfusion.SfTabView.XForms.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Datagrid.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="MainPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Page1.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="TabContent.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="TabPage1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="TreeView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="TabPage1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+  </ItemGroup>
+</Project>
